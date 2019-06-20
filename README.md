@@ -102,3 +102,20 @@ ubuntu:14.04 repositorio ubuntu y tag 14.04, /bin/bash es el comando a ejecutars
 ```
 	$ http:// http://67.205.173.14:80/
 ```
+
+
+**Errores:
+
+**Error: listen EADDRINUSE while using nodejs
+
+**Solucion: Al momento de levantar el servidor y realizar pruebas el proceso queda abierto y para cerrarlo localizamos el proceso , el cual utiliza el puerto 80, con el siguiente comando
+```
+	$ lsof -i tcp:8888
+```
+
+**Y matamos el proceso con 
+```
+	$ kill -9 [NUMERO DE PROCESO]
+```
+
+
